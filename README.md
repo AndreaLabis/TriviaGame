@@ -1,6 +1,6 @@
 # TriviaGame
 
-This is a trivia game, based on the hit television show FRIENDS! 
+This is a trivia game based on the hit television show FRIENDS! 
 
 The game will allow the user to guess if the questions displayed on screen are true or false.
 
