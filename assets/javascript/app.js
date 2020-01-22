@@ -44,36 +44,12 @@ var theQuestions = [{
                },
                correctAnswer: 'b'
            }
-       ];
-
-
-
-    var count = 30;
-    var timer = setInterval(function() {
-       console.log(count);
-       count--;
-       if (count === 0) {
-           stop();
-          alert("Time's Up!");
-       }
-       }, 1000);
-       
-    $("#display-timer").html("<h2>" + count+ "</h2>");
-     
-  
-      
-   function stop() {
-     clearInterval(intervalId);
-   }
-     run();
-       
-   function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
+       ];   
+        function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
           
        
        function showQuestions(questions, quizContainer){
-           var output = [];
-	//         var answers;
-          
+           var output = [];      
 
            for(var i=0; i<questions.length; i++){
            answers = [];
@@ -107,11 +83,10 @@ var theQuestions = [{
                 
                if(userAnswer===questions[i].correctAnswer){
                    numCorrect++;
-                   answerContainers[i].style.color = 'lightgreen';
-               }
+                   }
 
                else{
-                   answerContainers[i].style.color = 'red';
+                   numCorrect===;
                }
            }
 
@@ -123,11 +98,10 @@ var theQuestions = [{
            }
        }    
           
-       showQuestions(questions, quizContainer);
-    
-        
-       submitButton.onclick = function(){
-           showResults(questions, quizContainer, resultsContainer);
+         showQuestions(questions, quizContainer);
+                submitButton.onclick = function(){
+          
+         showResults(questions, quizContainer, resultsContainer);
        };
     
        var quizContainer = document.getElementById('quiz');
@@ -136,4 +110,5 @@ var theQuestions = [{
    };
 
    generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
+
   
